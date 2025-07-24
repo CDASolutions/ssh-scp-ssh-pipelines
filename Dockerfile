@@ -1,13 +1,12 @@
-FROM python:3.9
+FROM python:3.9-bookworm
+# LABEL "maintainer"="Scott Ng <thuongnht@gmail.com>"
+# LABEL "repository"="https://github.com/cross-the-world/ssh-scp-ssh-pipelines"
+# LABEL "version"="v1.1.0"
 
-LABEL "maintainer"="Scott Ng <thuongnht@gmail.com>"
-LABEL "repository"="https://github.com/cross-the-world/ssh-scp-ssh-pipelines"
-LABEL "version"="v1.1.0"
-
-LABEL "com.github.actions.name"="ssh-scp-ssh-pipelines"
-LABEL "com.github.actions.description"="Pipeline: ssh -> scp -> ssh"
-LABEL "com.github.actions.icon"="terminal"
-LABEL "com.github.actions.color"="gray-dark"
+# LABEL "com.github.actions.name"="ssh-scp-ssh-pipelines"
+# LABEL "com.github.actions.description"="Pipeline: ssh -> scp -> ssh"
+# LABEL "com.github.actions.icon"="terminal"
+# LABEL "com.github.actions.color"="gray-dark"
 
 RUN apt-get update -y && \
   apt-get install -y ca-certificates openssh-client openssl sshpass
